@@ -22,10 +22,10 @@ class Ball {
   }
 
   bounce() {
-    if (this.pos.x > width || this.pos.x < 0) {
+    if (this.pos.x > width - this.size || this.pos.x < 0 + this.size) {
       this.vel.x *= -1;
     }
-    if (this.pos.y > height || this.pos.y < 0) {
+    if (this.pos.y > height - this.size || this.pos.y < 0 + this.size) {
       this.vel.y *= -1;
     }
   }
